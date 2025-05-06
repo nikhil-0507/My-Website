@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import ContextAlert from '../components/ContextAlert.astro';
 import Markdown from '../components/Markdown.astro';
+import profilePic from '../assets/nikhil-pic.jpeg';
 
 const markdownContent = `
 Hi, I'm **Nikhil Patil** 👋  
@@ -12,7 +12,7 @@ Welcome to my personal site. I'm a Lead DevOps Engineer passionate about cloud-n
 ### 🔗 Quick Links
 - 📝 [My Blog](https://yourblog.com)
 - 🎤 [Events & Talks](https://yourevents.com)
-- 💼 [LinkedIn](https://linkedin.com/in/yourusername)
+- 💼 [LinkedIn](https://www.linkedin.com/in/nikhil-s-patil)
 - 🐦 [Twitter](https://twitter.com/yourusername)
 - 💻 [GitHub](https://github.com/yourusername)
 
@@ -22,28 +22,28 @@ Welcome to my personal site. I'm a Lead DevOps Engineer passionate about cloud-n
 
 <Layout title="Nikhil Patil – DevOps Engineer">
   
-    <!-- 👤 Profile Image Section -->
-    <section class="flex justify-center mb-6">
-      <img
-        src="src/assets/nikhil-pic.jpeg"
-        alt="Nikhil Patil"
-        class="rounded-full w-40 h-40 object-cover border-4 border-gray-300 shadow-md"
-      />
-    </section>
-  
-    <!-- 🧾 Headline -->
-    <section class="mb-10 text-center">
-      <h1 class="text-4xl font-bold mb-4">Nikhil Patil</h1>
-      <p class="text-xl text-white-600">Lead DevOps Engineer • Cloud • CI/CD • Infrastructure as Code</p>
-    </section>
-  
-    <!-- 📜 Main Content -->
-    <section class="prose lg:prose-xl max-w-3xl mx-auto mb-10">
-      <Markdown content={markdownContent} />
-    </section>
-  
-    <!-- 🔗 CTA -->
-    <section class="text-center">
-      <a href="https://yourblog.com" class="btn btn-lg sm:min-w-64">Visit My Blog</a>
-    </section>
-  </Layout>
+  <!-- 👤 Profile Image Section -->
+  <section class="flex justify-center mb-6">
+    <img
+      src={profilePic}
+      alt="Nikhil Patil"
+      class="rounded-full w-40 h-40 object-cover border-4 border-gray-300 shadow-md"
+    />
+  </section>
+
+  <!-- 🧾 Headline -->
+  <section class="mb-10 text-center">
+    <h1 class="text-4xl font-bold mb-4">Nikhil Patil</h1>
+    <p class="text-xl text-gray-300">Lead DevOps Engineer • Cloud • CI/CD • Infrastructure as Code</p>
+  </section>
+
+  <!-- 📜 Main Content -->
+  <section class="prose lg:prose-xl max-w-3xl mx-auto mb-10 text-gray-100">
+    <Markdown content={markdownContent} />
+  </section>
+
+  <!-- 🔗 CTA -->
+  <section class="text-center">
+    <a href="https://yourblog.com" class="btn btn-lg sm:min-w-64">Visit My Blog</a>
+  </section>
+</Layout>
